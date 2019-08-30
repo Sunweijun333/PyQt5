@@ -1,0 +1,12 @@
+尺寸策略（SizPoplicy）
+
+sizeHint（期望尺寸）
+
+对于大多数控件来说，期望尺寸是只读的
+读取期望尺寸：
+self.pushButton.sizeHint().width()
+self.pushButton.sizeHint().Height()
+
+最小期望尺寸：
+self.pushButton.minimumsizeHint().width()
+self.pushButton.minimumsizeHint().Height()
