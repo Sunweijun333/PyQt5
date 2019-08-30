@@ -1,7 +1,7 @@
 import sys
 import ContainerLayout
 
-from PyQt5.QtWidgets import QApplication,QMainWindow
+from PyQt5.QtWidgets import QApplication, QMainWindow
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
