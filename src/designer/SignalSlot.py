@@ -17,6 +17,20 @@ class Ui_MainWindow(object):
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton.setGeometry(QtCore.QRect(290, 170, 80, 22))
         self.pushButton.setObjectName("pushButton")
+        self.checkBox = QtWidgets.QCheckBox(self.centralwidget)
+        self.checkBox.setGeometry(QtCore.QRect(290, 260, 141, 20))
+        self.checkBox.setChecked(True)
+        self.checkBox.setObjectName("checkBox")
+        self.checkBox_2 = QtWidgets.QCheckBox(self.centralwidget)
+        self.checkBox_2.setGeometry(QtCore.QRect(290, 340, 141, 20))
+        self.checkBox_2.setChecked(False)
+        self.checkBox_2.setObjectName("checkBox_2")
+        self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit.setGeometry(QtCore.QRect(290, 290, 113, 22))
+        self.lineEdit.setObjectName("lineEdit")
+        self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
+        self.textEdit.setGeometry(QtCore.QRect(290, 390, 104, 70))
+        self.textEdit.setObjectName("textEdit")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 19))
@@ -28,10 +42,14 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.pushButton.clicked.connect(MainWindow.close)
+        self.checkBox.toggled['bool'].connect(self.lineEdit.setVisible)
+        self.checkBox_2.toggled['bool'].connect(self.textEdit.setEnabled)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.pushButton.setText(_translate("MainWindow", "CloseWin"))
+        self.checkBox.setText(_translate("MainWindow", "Appear/Hide"))
+        self.checkBox_2.setText(_translate("MainWindow", "Able/Enable"))
 
