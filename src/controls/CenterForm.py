@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 import sys
 from PyQt5.QtWidgets import QDesktopWidget, QMainWindow, QApplication
-# from PyQt5.QtGui import QIcon
+from PyQt5.QtGui import QIcon
 
 
 class CenterForm(QMainWindow):
@@ -25,9 +25,8 @@ class CenterForm(QMainWindow):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    # app.setWindowIcon(QIcon('./images/icon.ico'))
+    app.setWindowIcon(QIcon('./images/icon.ico'))
     main = CenterForm()
-    # main.center()
     main.show()
     sys.exit(app.exec_())
 
